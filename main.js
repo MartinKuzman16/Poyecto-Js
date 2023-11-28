@@ -45,13 +45,15 @@ else if ( fecha === "miercoles") {
 
 //----------------------------------------------------
 // SE TRANCA LA WEB SI ACTIVO ESTA LINEA DE CODIGO 
+
+
 /*let ingreso = prompt ("para platinar ingrese aqui el dia")
 
 while (ingreso !="sabado, lunes, miercoles, viernes");
 
     console.log ("agenda confirmada para el dia " + ingreso );*/
 
-
+//-----------------------------------------------------------------
 const pago = prompt ("¿como sera su metodo de pago?" ) ;
 
 switch (pago) {
@@ -64,6 +66,7 @@ switch (pago) {
  default: S
  console.log ("no aceptamos ese metodo de pago");
 }
+//---------------------------------------------------------
 
 
 
