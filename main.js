@@ -11,10 +11,6 @@ let corte_barba_cejas = "500";
 let promo1 = corte_barba;
 let promo2 = corte_barba_cejas;
 
-/*let servicios = prompt ("ingresa un servicio");
-
-console.log (" el precio es  " + corte + " pesos");*/
-
 /*-------------------------------------------------*/
 
 
@@ -36,23 +32,6 @@ else if ( fecha === "miercoles") {
 
 } 
 
-/*if (martes && jueves){
-    console.log ("hay disponibilidad");
-} else{
-    console.log ("no hay disponibilidad");
-}
-*/
-
-//----------------------------------------------------
-// SE TRANCA LA WEB SI ACTIVO ESTA LINEA DE CODIGO 
-
-
-/*let ingreso = prompt ("para platinar ingrese aqui el dia")
-
-while (ingreso !="sabado, lunes, miercoles, viernes");
-
-    console.log ("agenda confirmada para el dia " + ingreso );*/
-
 //-----------------------------------------------------------------
 const pago = prompt ("¿como sera su metodo de pago?" ) ;
 
@@ -63,18 +42,76 @@ switch (pago) {
     case "tarjeta":
         console.log ("paga con tarjeta");
     break;
- default: S
- console.log ("no aceptamos ese metodo de pago");
+    default: S
+    console.log ("no aceptamos ese metodo de pago");
 }
 //---------------------------------------------------------
+ // Declaración de función
+function sumar(corte,barba) {
+    return corte + barba;
+    }
+
+    let resultado = sumar(corte, barba);
+    console.log(resultado)
 
 
 
 
 
+// Declaración de un objeto
+let cliente = {
+    nombre: "Martin",
+    costo_servicio_corte:300,
+    };
+    
+
+    console.log(cliente.nombre);
+    console.log(cliente.costo_servicio_corte); 
+
+    
 
 
 
+    // Declaración de array
+let servicios = ["corte", "barba", "cejas", "platinado"];
 
+console.log(servicios[0]); 
+console.log(servicios[1]);
+console.log(servicios[2]); 
+
+console.log(servicios[3]); 
+console.log(servicios[4]); 
+
+
+// find
+
+let Servicios = [
+    { nombre: "corte", precio: "300" },
+    { nombre: "barba", precio: "200" },
+    { nombre: "cejas", precio: "100" }
+];
+
+// Buscar servicio por nombre
+let BuscaServicio = Servicios.find(function(Servicios) {
+  return Servicios.nombre === "corte";
+});
+
+
+console.log(BuscaServicio);
+
+// filter
+
+let ServiciosPrecios = [
+    { nombre: "corte", precio: "300" },
+    { nombre: "barba", precio: "200" },
+    { nombre: "cejas", precio: "100" }
+];
+
+
+let PrecioBarba = precio.filter(function(precio) {
+  return precio.barba === "200";
+});
+
+console.log(PrecioBarba);
 
 
