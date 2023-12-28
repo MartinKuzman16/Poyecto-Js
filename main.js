@@ -1,4 +1,4 @@
-alert();
+
 // variables
 let corte = "300";
 let barba = "200";
@@ -98,6 +98,7 @@ let BuscaServicio = Servicios.find(function(Servicios) {
 
 
 console.log(BuscaServicio);
+/*-------------------------3era entrega----------------------------------------*/
 
 // filter
 
@@ -114,4 +115,60 @@ let PrecioBarba = precio.filter(function(precio) {
 
 console.log(PrecioBarba);
 
+/*-------------------------3era entrega----------------------------------------*/
+
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarAgendaDesdeStorage();
+        });
+
+        function agendarServicio() {
+            // Obtener datos del formulario
+            var nombre = document.getElementById('nombre').value;
+            var servicio = document.getElementById('servicio').value;
+            var fecha = document.getElementById('fecha').value;
+            var hora = document.getElementById('hora').value;
+
+            // Validar y almacenar en localStorage
+            if (nombre && servicio && fecha && hora) {
+                var nuevoServicio = {
+                    nombre: nombre,
+                    servicio: servicio,
+                    fecha: fecha,
+                    hora: hora
+                };
+
+                // Obtener servicios existentes o inicializar un array vacío
+                var agenda = JSON.parse(localStorage.getItem('agenda')) || [];
+
+                // Agregar el nuevo servicio
+                agenda.push(nuevoServicio);
+
+                // Almacenar en localStorage
+                localStorage.setItem('agenda', JSON.stringify(agenda));
+
+                // Limpiar el formulario
+                document.getElementById('barberForm').reset();
+
+                // Recargar la lista de agenda
+                cargarAgendaDesdeStorage();
+            } else {
+                alert('Por favor, complete todos los campos.');
+            }
+        }
+
+        function cargarAgendaDesdeStorage() {
+            var listaAgenda = document.getElementById('listaAgenda');
+            listaAgenda.innerHTML = '';
+
+            // Obtener servicios almacenados en localStorage
+            var agenda = JSON.parse(localStorage.getItem('agenda')) || [];
+
+            // Mostrar la lista de servicios
+            agenda.forEach(function(servicio) {
+                var listItem = document.createElement('li');
+                listItem.textContent = `${servicio.nombre} - ${servicio.servicio} - ${servicio.fecha} - ${servicio.hora}`;
+                listaAgenda.appendChild(listItem);
+            });
+        }
+    
 
