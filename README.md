@@ -19,4 +19,4 @@ Para cualquier pregunta o comentario, puedes ponerte en contacto con el equipo d
 
 Nombre: MartinKuzman16
 Correo electrónico: martinkuzman@hotmail.com
-¡Gracias por utilizar Salinas Barbersop, sistema de agenda.
+¡Gracias por utilizar el servicio de Salinas Barbershop, sistema de agenda.
