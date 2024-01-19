@@ -13,39 +13,6 @@ let promo2 = corte_barba_cejas;
 
 /*-------------------------------------------------*/
 
-
-let SoloDisponible = "martes"
-let dia = prompt (" ingresa dia para agendarse");
-const fecha = "martes";
-
-if (fecha === "martes") {
-console.log("Si hay disponibilidad");
-} 
-
-else if (fecha === " jueves") { 
-    console.log("Si hay disponibilidad");
-
-}
-
-else if ( fecha === "miercoles") {
-        console.log ( "No hay disponibilidad");
-
-} 
-
-//-----------------------------------------------------------------
-const pago = prompt ("¿como sera su metodo de pago?" ) ;
-
-switch (pago) {
-    case "efectivo":
-    console.log (" paga con efectivo");
-    break;
-    case "tarjeta":
-        console.log ("paga con tarjeta");
-    break;
-    default: S
-    console.log ("no aceptamos ese metodo de pago");
-}
-//---------------------------------------------------------
  // Declaración de función
 function sumar(corte,barba) {
     return corte + barba;
