@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
     cargarAgendaDesdeStorage();
     
@@ -60,4 +59,3 @@ function guardarInfoEnLocalStorage() {
 function mostrarMensajeExito() {
     alert('Servicio agendado con éxito.');
 }
-
